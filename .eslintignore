@@ -1,0 +1,3 @@
+.slintignore
+node_modules
+test

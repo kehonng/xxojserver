@@ -1,0 +1,42 @@
+{
+  "name": "xxojserver",
+  "version": "0.0.1",
+  "description": "NodeJS静态资源服务器",
+  "main": "src/index.js",
+  "keywords": [
+    "server"
+  ],
+  "repository": {
+    "url": "https://github.com/kehonng/xxojserver"
+  },
+  "bin": {
+    "xxojserver": "bin/xxojserver.js"
+  },
+  "scripts": {
+    "lint": "eslint . --cache",
+    "fix": "eslint . --fix"
+  },
+  "lint-staged": {
+    "*.js": "eslint --cache"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "author": "kehhong",
+  "license": "ISC",
+  "dependencies": {
+    "etag": "^1.8.1",
+    "pug": "^2.0.4",
+    "yargs": "^15.3.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
+    "eslint": "^6.8.0",
+    "husky": "^4.2.3",
+    "lint-staged": "^10.0.8"
+  }
+}
